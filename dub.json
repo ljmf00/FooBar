@@ -1,0 +1,6 @@
+{
+	"name": "foobar-example",
+	"description": "Random code example",
+	"targetType": "executable",
+	"targetName": "FooBar"
+}
