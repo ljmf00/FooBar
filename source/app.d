@@ -1,19 +1,28 @@
 module app;
 
-int main() {
-	import std.stdio : writeln;
-
-	foreach(i; 1 .. 100)
+void main() {
+	enum string foobar()()
 	{
-		if(i % 15 == 0)
-			writeln("FooBar");
-		else if(i % 3 == 0)
-			writeln("Foo");
-		else if(i % 5 == 0)
-			writeln("Bar");
-		else
-			writeln(i);
+		string ret;
+
+		import std.conv : to;
+
+		foreach(ref i; 1 .. 101)
+		{
+			if(i % 15 == 0)
+				ret ~= "FooBar\n";
+			else if(i % 3 == 0)
+				ret ~= "Foo\n";
+			else if(i % 5 == 0)
+				ret ~= "Bar\n";
+			else
+				ret ~= to!string(i) ~ "\n";
+		}
+		return ret;
 	}
 
-	return 0;
+	enum string res = foobar!();
+
+	import std.stdio : write;
+	write(res);
 }
