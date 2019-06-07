@@ -1,6 +1,13 @@
 {
 	"name": "foobar-example",
 	"description": "Random code example",
+
+	"sourcePaths": ["source"],
+	"importPaths": ["source"],
 	"targetType": "executable",
-	"targetName": "FooBar"
+	"targetName": "FooBar",
+	"targetPath": "out",
+	"dependencies": {
+		"silly": "~>0.8.2"
+	}
 }

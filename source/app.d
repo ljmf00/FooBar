@@ -1,27 +1,18 @@
 module app;
 
-void main() {
-	enum string foobar()()
-	{
-		string ret;
+/**
+ * Authors: Luís Ferreira, contact@lsferreira.net
+ * License: MIT License
+ * Copyright: 2019, Luís Ferreira
+ */
 
-		import std.conv : to;
+import foobar : foobar;
 
-		foreach(ref i; 1 .. 101)
-		{
-			if(i % 15 == 0)
-				ret ~= "FooBar\n";
-			else if(i % 3 == 0)
-				ret ~= "Foo\n";
-			else if(i % 5 == 0)
-				ret ~= "Bar\n";
-			else
-				ret ~= to!string(i) ~ "\n";
-		}
-		return ret;
-	}
 
-	enum string res = foobar!();
+void main()
+{
+	import std.array : join;
+	enum string res = foobar!().join;
 
 	import std.stdio : write;
 	write(res);
