@@ -1,5 +1,9 @@
 v1.0
-Initial Release
+- Initial Release
 
 v1.1
-Use static code
+- Use static code
+
+v1.2
+- Add unittests
+- Add documentation
